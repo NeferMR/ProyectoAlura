@@ -1,29 +1,33 @@
 function mostrarTextarea() {
   var btnMostrar = document.getElementById("mostrar-btn");
   var textoInicial = document.getElementById("texto-inicial");
-  var textarea = document.getElementById("mi-textarea");
-  var contenidoReflejado = document.getElementById("contenido-reflejado");
   var cancelarBtn = document.getElementById("cancelar-btn");
 
-  textoInicial.style.display = "none";
-  textarea.style.display = "block";
+  textoInicial.innerHTML = "Ingrese texto a descifrar aquí";
   btnMostrar.style.display = "none";
-  contenidoReflejado.style.display = "block";
   cancelarBtn.style.display = "inline";
-  ocultarElementosTarjeta();
+  reiniciar();
 }
 
 function cancelarTextarea() {
   var btnMostrar = document.getElementById("mostrar-btn");
   var textoInicial = document.getElementById("texto-inicial");
-  var textarea = document.getElementById("mi-textarea");
-  var contenidoReflejado = document.getElementById("contenido-reflejado");
   var cancelarBtn = document.getElementById("cancelar-btn");
 
-  textoInicial.style.display = "block";
+  textoInicial.innerHTML = "Ingrese texto a cifrar aquí";
   btnMostrar.style.display = "inline";
-  contenidoReflejado.style.display = "none";
   cancelarBtn.style.display = "none";
+  reiniciar();
+}
+
+function reiniciar() {
+  var textarea = document.getElementById("mi-textarea");
+  var textoReflejado = document.getElementById("texto-reflejado");
+  var texto = document.getElementById("texto-inicial");
+
+  texto.style.display = "block"
+  textarea.value = "";
+  textoReflejado.value = "";
   mostrarElementosTarjeta();
 }
 
@@ -46,8 +50,9 @@ function reflejarTexto() {
     mostrarElementosTarjeta();
   } else {
     texto.style.display = "none"
-    ocultarElementosTarjeta();
     textoReflejado.value = textarea.value;
+    ocultarElementosTarjeta();
+    
   }
 }
 
@@ -58,38 +63,24 @@ textarea.addEventListener("input", reflejarTexto);
 // Ocultar texto y imagen de la tarjeta
 function ocultarElementosTarjeta() {
   var textoTarjeta = document.getElementById("texto-tarjeta");
+  var boton = document.getElementById("botoncopiar");
   var imagenTarjeta = document.querySelector("#tarjeta-container img");
 
   textoTarjeta.style.display = "none";
   imagenTarjeta.style.display = "none";
-  boton.style.display = "none";
+  boton.style.display = "block";
 }
 
 // Mostrar texto y imagen de la tarjeta
 function mostrarElementosTarjeta() {
   var textoTarjeta = document.getElementById("texto-tarjeta");
-  var boton = document.getElementById("copiar-btn");
+  var boton = document.getElementById("botoncopiar");
   var imagenTarjeta = document.querySelector("#tarjeta-container img");
 
   textoTarjeta.style.display = "block";
   imagenTarjeta.style.display = "block";
-  boton.style.display = "block";
+  boton.style.display = "none";
 
-}
-
-function mostrarTextarea() {
-  var btnMostrar = document.getElementById("mostrar-btn");
-  var textoInicial = document.getElementById("texto-inicial");
-  var textarea = document.getElementById("mi-textarea");
-  var contenidoReflejado = document.getElementById("contenido-reflejado");
-  var cancelarBtn = document.getElementById("cancelar-btn");
-
-  textoInicial.style.display = "none";
-  textarea.style.display = "block";
-  btnMostrar.style.display = "none";
-  contenidoReflejado.style.display = "block";
-  cancelarBtn.style.display = "inline";
-  ocultarElementosTarjeta();
 }
 
 function ajustarAltura() {
