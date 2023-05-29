@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vista.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="texto">
+        <img class="logo" src="img/Logo.png" alt="logo">
+        <textarea id="mi-textarea" cols="65" rows="20"></textarea>
+        <p id="texto-inicial">Ingrese texto aquí.</p>
+        <!-- <h2 class="subtitulo">Ingrese texto aquí</h2> -->
+    </div>
+
+    <div id="tarjeta-container">
+        <img class="imgt" src="img/Muñeco.png" alt="img">
+        <div id="texto-tarjeta">
+            <h3 class="titulot">Ningun mensaje fue encontrado</h3>
+            <!-- <textarea name="caja" id="caja" cols="38" rows="5">Ingresa el texto que desees encriptar o desencriptar.</textarea> -->
+            <!-- <h2 class="subtitulot">Ingresa el texto que desees encriptar o desencriptar.</h2> -->
+        </div>
+        <div id="contenido-reflejado">
+            <textarea id="texto-reflejado" cols="30" rows="10"></textarea>
+            <button class="copiar-btn" onclick="copiarTexto()">Copiar</button>
+        </div>
+    </div>
+
+    <div class="pie" id="pie">
+        <img class="icono" src="img/icono.png" alt="icono">
+        <h4 class="titulop">Solo letras minúsculas y sin acentos</h4>
+        <button id="mostrar-btn" onclick="mostrarTextarea()">Encriptar</button>
+        <button id="cancelar-btn" onclick="cancelarTextarea()" style="display: none;">Desencriptar</button>
+    </div>
+
+    <script src="vista.js"></script>
+
+</body>
+
+</html>
