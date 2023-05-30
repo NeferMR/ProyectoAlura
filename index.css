@@ -1,0 +1,233 @@
+body {
+    background-color: #F3F5FC;
+}
+
+.logo {
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: none;
+}
+
+
+.titulo {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    color: #0A3871;
+}
+
+.contenido {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.texto {
+    width: 60%;
+}
+
+#mi-textarea {
+    margin: 5% 2% 5% 20%;
+    width: 80%;
+    border: none;
+    display: block;
+    resize: none;
+    font-size: 24px;
+    background: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #0A3871;
+}
+
+#texto-inicial {
+    position: absolute;
+    display: block;
+    left: 20%;
+    top: 17%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #0A3871;
+    pointer-events: none;
+}
+
+
+#tarjeta-container {
+    background: #FFFFFF;
+    position: relative;
+    border-radius: 32px;
+    height: 500px;
+    width: 30%;
+    display: grid;
+    top: 80px;
+    align-content: space-around;
+    justify-content: center;
+}
+
+.imgt {
+    width: 80%;
+    margin-left: 38px;
+    pointer-events: none;
+}
+
+.titulot {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#contenido-reflejado {
+    height: 100%;
+    display: grid;
+    align-items: center;
+    align-content: space-around;
+}
+
+#texto-tarjeta {
+    padding: 0px;
+    gap: 16px;
+    position: absolute;
+    left: 26px;
+    top: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#texto-reflejado {
+    border: none;
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    resize: none;
+    background: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #0A3871;
+    pointer-events: none;
+}
+
+.copiar-btn {
+    display: none;
+    position: relative;
+    padding: 15px 60px;
+    margin: 15% auto;
+    border-radius: 5px;
+    background-color: #D8DFE8;
+    color: #0A3871;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 9999;
+}
+
+.pie {
+    position: relative;
+    margin-left: 20%;
+    margin-top: -3%;
+    border-radius: 25px;
+    height: auto;
+    width: 80%;
+}
+
+.icono {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+}
+
+.titulop {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 25px;
+}
+
+#mostrar-btn {
+    padding: 15px 60px;
+    margin-top: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #0A3871;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#cancelar-btn {
+    padding: 15px 60px;
+    margin-top: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #D8DFE8;
+    color: #0A3871;
+    border-color: #0A3871;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4444;
+}
+
+@media (max-width: 768px) {
+    .contenido {
+        flex-direction: column;
+    }
+
+    .texto {
+        width: 100%;
+    }
+
+    #mi-textarea {
+        margin: 10% auto;
+    }
+
+    #texto-inicial {
+        left: 100px;
+        top: 160px;
+    }
+
+    .pie {
+        margin-left: 10%;
+    }
+
+    #tarjeta-container {
+        width: 95%;
+    }
+
+    #texto-tarjeta {
+        left: 25%;
+        top: 5%;
+    }
+
+    .imgt {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    #texto-inicial {
+        top: 14%;
+        left: 12%;
+    }
+
+    .pie {
+        display: grid;
+    }
+
+    .icono {
+        top: 22%;
+    }
+
+    #texto-tarjeta {
+        left: 7%;
+    }
+}
